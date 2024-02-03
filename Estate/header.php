@@ -68,9 +68,11 @@
                   </li>
                 </ul>
               </li>
-              <li><a href="Detailpage.php">Detailpage</a></li>
+              <!-- <li><a href="Detailpage.php">Detailpage</a></li> -->
 
               <li><a href="testimonial.php">Testimonial</a></li>
+              <li><a href="signup.php">Signup</a></li>
+
 
             </ul>
 

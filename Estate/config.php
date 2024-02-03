@@ -1,3 +1,4 @@
 <?php
-$conn = mysqli_connect("localhost","root","","estate");
+$conn = mysqli_connect("localhost","root","","property");
+// echo ("data is connect");
 ?>
