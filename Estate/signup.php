@@ -1,6 +1,11 @@
+
 <?php
-include("header.php");
+    include("header.php");
+    include("config.php");
+    
 ?>
+<!-- UI -->
+<main id="main">
 
  <!-- ======= Contact Section ======= -->
  <section id="contact" class="contact ">
@@ -26,12 +31,14 @@ include("header.php");
                   <input type="text" name="user_name" class="form-control" id="name" placeholder="Enter Username" required>
                 </div>
                 <br>
-                <br><br>
+                <br>
+                <br>
                  <div class="col-md-12 form-group mt-3 mt-md-0">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email" required>
                 </div>
                 <br>
-                <br><br>
+                <br>
+                <br>
                 <div class="col-md-12 form-group mt-3 mt-md-0">
                   <input type="password" class="form-control" name="password" id="email" placeholder="Enter Password" required>
                 </div>
@@ -65,13 +72,39 @@ include("header.php");
 
       </div>
     </section><!-- End Contact Section -->
-
-
-
+</main>
 <?php
-include("footer.php");
+
+
+    if(isset($_POST["submit"])){
+      $user_name = $_POST['user_name'];
+      $email = $_POST['email'];
+      $password = $_POST['password'];
+      $address = $_POST['address'];
+      $phone = $_POST['phone'];
+      $role_id = $_POST['user_role'];
+      
+      
+      move_uploaded_file($temppath,$mypath);
+      $query = "INSERT INTO `users`(`user_name`, `email`, `passwordd`, `address`, `Phone`, `role`)
+       values ('$user_name','$email','$password','$address','$phone','2')";
+
+      $result = mysqli_query($conn, $query);
+      echo "<script>
+      alert('User Added Successfully'); 
+      window.location.href = 'login.php';</script>";
+    }
+
 ?>
 
 
 
+</body>
+
+</html>
+
+
+<?php
+include("footer.php")
+?>
 

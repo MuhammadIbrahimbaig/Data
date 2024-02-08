@@ -51,27 +51,11 @@
               <li><a href="contactus.php">Contact Us</a></li>
 
               <li><a href="services.php">Services</a></li>
-              <!-- <li><a href="properties.php">Properties</a></li> -->
-
-              <li class="has-children">
-                <a href="#">Properties</a>
-                <ul class="dropdown">
-                  <li><a href="properties.php ">Buy Property</a></li>
-                  <li><a href="#">Sell Property</a></li>
-                  <li class="has-children">
-                    <!-- <a href="#">Dropdown</a> -->
-                    <ul class="dropdown">
-                      <!-- <li><a href="#">Sub Menu One</a></li>
-                      <li><a href="#">Sub Menu Two</a></li>
-                      <li><a href="#">Sub Menu Three</a></li> -->
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <!-- <li><a href="Detailpage.php">Detailpage</a></li> -->
 
               <li><a href="testimonial.php">Testimonial</a></li>
               <li><a href="signup.php">Signup</a></li>
+              <li><a href="login.php">Login</a></li>
+
 
 
             </ul>
