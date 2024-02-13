@@ -508,6 +508,7 @@ include("header.php");
             </div>
           </div>
         </div>
+        <!-- graph -->
         <div class="row section-counter mt-5">
           <div
             class="col-6 col-sm-6 col-md-6 col-lg-3"
@@ -516,7 +517,7 @@ include("header.php");
           >
             <div class="counter-wrap mb-5 mb-lg-0">
               <span class="number"
-                ><span class="countup text-primary">3298</span></span
+                ><span class="countup text-primary">10384</span></span
               >
               <span class="caption text-black-50"># of Buy Properties</span>
             </div>
