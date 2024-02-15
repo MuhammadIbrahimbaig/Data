@@ -3,7 +3,7 @@
     session_destroy();
    echo"
     <script>
-    window.location.href:'http://localhost:82/E%20project/Data/Estate/index.php';
+    window.location.href='http://localhost:82/E%20project/Data/Estate/index.php';
     </script>";
 ?>
 
