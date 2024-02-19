@@ -57,6 +57,15 @@ session_start();
               <li><a href="services.php">Services</a></li>
 
               <li><a href="testimonial.php">Testimonial</a></li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link me-4 dropdown-toggle link-dark" data-bs-toggle="dropdown" href="#" role="button"  aria-expanded="false">Categories</a>
+                  <ul class="dropdown-menu">
+                     <li> <a href="#" class="dropdown-item">Plots</a> </li>
+                     <li> <a href="#" class="dropdown-item">Apartment</a></li>
+                    
+                    <!-- </li> -->
+                  </ul>
+                </li> 
 
               <!-- ACCOUNT DROP DOWN -->
               <?php
