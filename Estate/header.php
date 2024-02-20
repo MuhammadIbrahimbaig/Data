@@ -57,16 +57,33 @@ session_start();
               <li><a href="services.php">Services</a></li>
 
               <li><a href="testimonial.php">Testimonial</a></li>
-              <li class="nav-item dropdown">
-                  <a class="nav-link me-4 dropdown-toggle link-dark" data-bs-toggle="dropdown" href="#" role="button"  aria-expanded="false">Categories</a>
-                  <ul class="dropdown-menu">
-                     <li> <a href="#" class="dropdown-item">Plots</a> </li>
-                     <li> <a href="#" class="dropdown-item">Apartment</a></li>
-                    
-                    <!-- </li> -->
-                  </ul>
-                </li> 
+              
+                <!-- Account collection -->
+                        <!-- drop down collection -->
+                <!-- miss -->
+                <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categories
+          </a>
+          
 
+<ul class="dropdown-menu">
+            <?php
+                $con = mysqli_connect("localhost","root","", "estate");
+                
+                $query= "SELECT * FROM `categories`";
+
+                $result= mysqli_query($con, $query);
+
+                while($opt= mysqli_fetch_assoc($result)){
+            
+?>
+    <li><a class="dropdown-item" href="category.php?id=<?php echo $opt['Cat_Id'] ?> "><?php echo $opt['Category'] ?></a>
+<?php 
+}
+ ?>   
+</li></ul>
+                <!-- end account categories -->
               <!-- ACCOUNT DROP DOWN -->
               <?php
         if (!isset($_SESSION['name'])) {
