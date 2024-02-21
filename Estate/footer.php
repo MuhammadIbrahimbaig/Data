@@ -107,10 +107,12 @@
     <!-- Preloader -->
     <div id="overlayer"></div>
     <div class="loader">
-      <div class="spinner-border" role="status">
+  
+       <div class="spinner-border" role="status">
         <span class="visually-hidden">Loading...</span>
-      </div>
+      </div> 
     </div>
+    
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
