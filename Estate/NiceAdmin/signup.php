@@ -65,7 +65,7 @@
                 </div>
               </div>
               
-              <div class="text-center mt-3"><button type="submit" class="btn btn-secondary w-50" name="submit">Sign Up</button></div>
+              <div class="text-center mt-3"><button type="submit" class="btn btn-primary w-50" name="submit">Sign Up</button></div>
               <p class="mt-5 text-center">Already have an account? <a href="login.php">Login</a></p>
             </form>
           </div><!-- End Contact Form -->
