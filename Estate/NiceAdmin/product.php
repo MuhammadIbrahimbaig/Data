@@ -27,8 +27,14 @@ include("config.php");
 <?php
 $query = "select * from category";
 $result = msqli_query("$conn,$qry");
-
+while ($data=mysqli_fetch_assoc($result)) {
 ?>
+                <option value="<?php echo $data['Cat_Id'] ?>"><?php echo $data['Category'] ?></option>
+<?php
+}
+?>
+</select>
+<input class="btn btn-primary text-light w-100 mt-5 " type="submit" name="submit">
 
 </div>
     
