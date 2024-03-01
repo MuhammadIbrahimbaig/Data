@@ -1,5 +1,9 @@
 <?php
 include("header.php");
+        session_start();
+        include "header.php";
+        if($_SESSION['user_name'] == 'admin'){
+       ?>
 ?>
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
@@ -680,4 +684,11 @@ include("header.php");
   </main><!-- End #main -->
   <?php
 include("footer.php");
+              }
+              else {
+                echo 
+                "<script>
+                window.location.href='login.php';
+                </script>";
+              }
 ?>
