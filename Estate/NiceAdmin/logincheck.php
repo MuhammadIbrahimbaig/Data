@@ -13,7 +13,7 @@ if ($var) {
    $_SESSION['email']= $var['email'];
    $_SESSION['role']= $var ['role'];
 
-   if($_SESSION['role']== 2){
+   if($_SESSION['role']== 1){
     
     echo "<script>
     alert('LOGIN SUCCESFULLY'); 
