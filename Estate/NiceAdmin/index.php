@@ -1,7 +1,7 @@
 <?php
         session_start();
-        include("header.php");
-        if($_SESSION['user_name'] == 'admin'){  
+        include "header.php";
+        if($_SESSION['user_name'] == 'admin'){
        ?>
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
