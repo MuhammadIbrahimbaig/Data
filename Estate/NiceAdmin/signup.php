@@ -1,10 +1,32 @@
 
 
 <?php
-    include("header.php");
+    // include("header.php");
     include("config.php");
     
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+ <!-- Vendor CSS Files -->
+ <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+<!-- font Awesome  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+<!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
 <!-- UI -->
 <main id="main">
 
@@ -61,7 +83,7 @@
              
                 <!-- role dropdown -->
                 <div class="col-md-12 form-group mt-3 mt-md-0">
-                    <input type="hidden" class="form-control" name="user_role" value="1" required>
+                    <input type="hidden" class="form-control" name="user_role" value= "1" required>
                 </div>
               </div>
               

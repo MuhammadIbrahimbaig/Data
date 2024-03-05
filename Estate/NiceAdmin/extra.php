@@ -1,75 +1,123 @@
 <?php
-    include("config.php");
-    $query = "SELECT * FROM products p join categories c on prod_id = cat_id";
-    $result = mysqli_query($conn, $query);
-    include("header.php");
-    ?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</head>
-<body>
-    <br><br>
-    <form class="form w-50 mt-5  mx-auto" action="add_product_backend.php" method="POST" enctype="multipart/form-data">
-        <h1 class="fw-bold display-5  fs-2 text-center text-primary mt-5">Add products</h1>
-        
-        <input class="form-control p-1 mt-2" placeholder="ProductName" type="text"  name="prodname" required>
-        <input class="form-control p-1 mt-2" placeholder="ProductPrice" type="text"  name="prodprice" required>
-        <input class="form-control p-1 mt-2" placeholder="Product Image" type="file"  name="prodimage" required >
-        <input class="form-control p-1 mt-2" placeholder="Product Description" type="text"  name="Prod_Desc" required>
-        <br>
-        
-            <!-- Category Drop DOwn -->
-        <select name="cat" id="" class=" form-control">
-            <?php
-                $qry= "select * from categories";
-                $res= mysqli_query($conn, $qry);
-                while($data=mysqli_fetch_assoc($res)){
-             
-            ?>
-  
-
-                <option value="<?php echo $data['Cat_Id'] ?>"><?php echo $data['Category'] ?></option>
-                <?php }?>
-            </select>
-              
-                <input class="btn btn-primary text-light w-100 mt-5 " type="submit" name="submit">
-           
-
-    </form>
-    
-    <!-- // image work =======///////-->
-    <?php
-
-        require("config.php");
-
-        if(isset($_GET['submit'])){
-
-
-        $img= $_FILES["prodimage"];
-        print_r($img);
-$img= $_FILES["prodimage"];
-// print_r($img);
-
-
-        $imgname= $img['prodname'];
-        $temppath = $img['tmp_name'];
-        $mypath= "images/".$imgname;
-
-        move_uploaded_file($temppath,$mypath);
-
-        $qry="INSERT INTO `products`(`prodimage`) VALUES ('$mypath')";
-        mysqli_query($conn,$qry);
-}
+session_start();
+// include("header.php");
 ?>
-    
-</body>
-</html>
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+<!-- font Awesome  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+<!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Jan 29 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+  <!-- Front end -->
+  <section id="contact" class="contact ">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header text-center fw-bolder ">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+          <h2 class="text-primary">Login!</h2>
+          <p>Login  website!</p>
+
+        </div>
+
+        <div class="row gx-lg-0 gy-4">
+          <div class="col-lg-6 mx-auto ">
+            <form  action="#" method="POST">
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <input type="text" name="user" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <br>
+                <br>
+                <br>
+                 <div class="col-md-12 form-group mt-3 mt-md-0">
+                  <input type="password" class="form-control" name="pass"  placeholder="Enter your password" required>
+                </div>
+                <br>
+                <br>
+               
+              <div class="text-center mt-3"><button type="submit" class="btn btn-secondary w-50" name="submit">Login</button></div>
+              <p class="mt-5 text-center">new account create? <a href="signup.php">signup</a></p>
+            </form>
+          </div><!-- End Contact Form -->
+        </div>
+
+      </div>
+    </section>
+
+<!-- authen -->
+
+<?php
+
+include("config.php");
+
+
+if(isset($_POST['login'])){
+  $email = $_POST['user'];
+  $password = $_POST['pass'];
+
+  $query = "SELECT * from `users` where `user_name` = '$email' AND `passwordd` = '$password'";
+  $result = mysqli_query($conn, $query);
+  $data = mysqli_fetch_assoc($result);
+  if($data){
+    $_SESSION['user_id'] = $data['user_id'];
+    $_SESSION['user_name'] = $data['user_name'];
+    // $_SESSION['role'] = $data['role'];
+    if($_SESSION['user_name'] =='admin'){
+    header('location:index.php');
+    }
+ 
+  }
+
+}
+
+
+  ?>
+
+
+
+
+
+
+
+
+

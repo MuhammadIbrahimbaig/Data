@@ -1,28 +1,16 @@
 <?php
 session_start();
-// include("header.php");
+
 ?>
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard - NiceAdmin Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+ <!-- Vendor CSS Files -->
+ <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
@@ -34,67 +22,87 @@ session_start();
 
 <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: NiceAdmin
-  * Updated: Jan 29 2024 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
-
-<body>
-  <!-- Front end -->
-  <section id="contact" class="contact ">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header text-center fw-bolder ">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-          <h2 class="text-primary">Login!</h2>
-          <p>Login  website!</p>
-
+<body class="bg-dark">
+  
+  <!--  Body Wrapper -->
+  <div class="log">
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <div
+      class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
+      <div class="d-flex align-items-center justify-content-center w-100">
+        <div class="row justify-content-center w-100">
+          <div class="col-md-8 col-lg-6 col-xxl-3">
+            <div class="card mb-0">
+              <div class="card-body">
+                <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
+                  <img src="assets/images/logos/dark-logo.svg" width="180" alt="">
+                </a>
+                <p class="text-center">Admin Panel</p>
+                <form action="#" method="POST">
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label" >Username</label>
+                    <input type="text" name="user" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                  </div>
+                  <div class="mb-4">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password"  name="pass" class="form-control" id="exampleInputPassword1" required>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="form-check">
+                      <input class="form-check-input primary" type="checkbox" value="" id="flexCheckChecked" checked required>
+                      <label class="form-check-label text-dark" for="flexCheckChecked">
+                        Remeber this Device
+                      </label>
+                    </div>
+                    <a class="text-primar fw-bold" href="./index.html">Forgot Password ?</a>
+                  </div>
+                  <button type="submit" class="btn btn-secondary w-100 py-8 fs-4 mb-4 rounded-2" name="login">Log In</button>
+                  <div class="d-flex align-items-center justify-content-center">
+                    <!-- <p class="fs-4 mb-0 fw-bold">New to Modernize?</p> -->
+                    <a class="text-primary fw-bold ms-2" href="signup.php">Create an account</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="row gx-lg-0 gy-4">
-          <div class="col-lg-6 mx-auto ">
-            <form method="post" action="logincheck.php">
-              <div class="row">
-                <div class="col-md-12 form-group">
-                  <input type="text" name="user" class="form-control" placeholder="Enter your email" required>
-                </div>
-                <br>
-                <br>
-                <br>
-                 <div class="col-md-12 form-group mt-3 mt-md-0">
-                  <input type="password" class="form-control" name="pass"  placeholder="Enter your password" required>
-                </div>
-                <br>
-                <br>
-               
-              <div class="text-center mt-3"><button type="submit" class="btn btn-secondary w-50" name="submit">Login</button></div>
-              <p class="mt-5 text-center">new account create? <a href="signup.php">signup</a></p>
-            </form>
-          </div><!-- End Contact Form -->
-        </div>
-
       </div>
-    </section>
+    </div>
+  </div></div>
+</body>
+</html>
+<!-- 
+  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html> -->
+
 <?php
-include("footer.php");
+
+include("config.php");
 
 
-?>
+if(isset($_POST['login'])){
+  $email = $_POST['user'];
+  $password = $_POST['pass'];
+
+  $query = "SELECT * from `users` where `user_name` = '$email' AND `passwordd` = '$password'";
+  $result = mysqli_query($conn, $query);
+  $data = mysqli_fetch_assoc($result);
+  if($data){
+    $_SESSION['user_id'] = $data['user_id'];
+    $_SESSION['user_name'] = $data['user_name'];
+    // $_SESSION['role'] = $data['role'];
+    if($_SESSION['user_name'] =='admin'){
+    header('location:index.php');
+    }
+ 
+  }
+
+}
 
 
-
-
-
-
-
-
-
-
+  ?>
