@@ -23,7 +23,7 @@
           <li>
            
           <li>
-            <a href="components-breadcrumbs.html">
+            <a href="addproduct.php">
               <i class="bi bi-circle"></i><span>Add Products</span>
             </a>
           </li>
