@@ -18,7 +18,7 @@ $query = "SELECT * FROM products p join categories c on prod_id = cat_id";
 </head>
 <body>
 <br><br>
-    <form class="form w-50 mt-5  mx-auto" action="add_product_backend.php" method="POST" enctype="multipart/form-data">
+    <form class="form w-50 mt-5  mx-auto" action="Probackend.php" method="POST" enctype="multipart/form-data">
         <h1 class="fw-bold display-5  fs-2 text-center text-primary mt-5">Add products</h1>
         
         <input class="form-control p-1 mt-2" placeholder="ProductName" type="text"  name="prodname" required>
