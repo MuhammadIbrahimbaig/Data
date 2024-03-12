@@ -43,7 +43,7 @@ session_start();
                 <form action="#" method="POST">
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label" >Username</label>
-                    <input type="text" name="user" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                    <input type="text" name="user" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                   </div>
                   <div class="mb-4">
                     <label for="exampleInputPassword1" class="form-label">Password</label>

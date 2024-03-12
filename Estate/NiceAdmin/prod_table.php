@@ -16,6 +16,8 @@ $result = mysqli_query($conn,$query);
                     <th>Product Image</th>
                     <th>Product Description</th>
                     <th>Product Category</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                      
                 
             </tr>
@@ -32,7 +34,7 @@ $result = mysqli_query($conn,$query);
                 <td><?php echo $data ["Prod_Desc"]; ?></td>
                 <td><?php echo $data ["Prod_Category"]; ?></td>
                 
-                <td><button class="btn btn-primary "><a class="text-light"  onclick="return confirm('are you sure product edit')" href="edit_product.php?id=<?php echo $data["prod_id"]; ?>" >edit</a></button></td>
+                <td><button class="btn btn-primary "><a class="text-dark"  onclick="return confirm('are you sure product edit')" href="edit_product.php?id=<?php echo $data["prod_id"]; ?>" >edit</a></button></td>
                
                 <td><button class="btn btn-danger "><a class="text-light"  onclick="return confirm('are you sure product delete')" href="delete_product.php?id=<?php echo $data["prod_id"]; ?>" >delete</a></button></td>
     

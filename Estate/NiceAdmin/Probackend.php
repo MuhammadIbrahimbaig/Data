@@ -26,7 +26,7 @@ move_uploaded_file($temppath,$mypath);
  $result = mysqli_query($conn , $query); 
  
  if ($result) {
-    header('location:product_table.php');
+    header('location:prod_table.php');
  }
  else{
     echo " error record";
