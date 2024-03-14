@@ -26,8 +26,11 @@
             <a href="addproduct.php">
               <i class="bi bi-circle"></i><span>Add Products</span>
             </a>
+            <a href="Prod_table.php">
+            <i class="bi bi-circle"></i><span>Pro Table</span>
+            </a>
           </li>
-        
+        <!-- <li>Product Table</li> -->
         </ul>
       </li><!-- End Components Nav -->
 

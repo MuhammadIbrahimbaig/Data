@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 05, 2024 at 02:57 PM
+-- Generation Time: Mar 14, 2024 at 11:13 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -50,7 +50,6 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`Cat_Id`, `Category`) VALUES
-(0, ''),
 (1, 'Flats'),
 (2, 'Rents'),
 (3, 'Plot'),
@@ -111,29 +110,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`prod_id`, `prodname`, `prodprice`, `prodimage`, `Prod_Desc`, `Prod_Category`) VALUES
-(1, 'Smart Watch', 6700, 'assets/images/smartwatch.png', 'Shophive is the best place to buy Smart Watches in Pakistan and you can find them at lowest price. ', NULL),
-(4, 'Smart watch', 780, 'assets/images/smartwatch2.webp', 'Shophive is the best place to buy Smart Watches in Pakistan and you can find them at lowest price. ', NULL),
-(5, 'Smart Watch', 6800, 'assets/images/smartwatch3.gif', 'Shophive is the best place to buy Smart Watches in Pakistan and you can find them at lowest price.', NULL),
-(6, 'Smart Watch', 670, 'assets/images/smartwatch4.webp', 'Shophive is the best place to buy Smart Watches in Pakistan and you can find them at lowest price.', NULL),
-(7, 'Smart Watch', 4000, 'assets/images/watch5.jpg', 'Shophive is the best place to buy Smart Watches in Pakistan and you can find them at lowest price.', NULL),
-(8, 'Smart Watch', 4000, 'assets/images/watch6.jpg', 'Shophive is the best place to buy Smart Watches in Pakistan and you can find them at lowest price.', NULL),
-(9, 'Smart Watch', 4000, 'assets/images/watch7.jpg', 'Shophive is the best place to buy Smart Watches in Pakistan and you can find them at lowest price.', NULL),
-(10, 'Smart Watch', 7000, 'assets/images/watch8.jpg', 'Shophive is the best place to buy Smart Watches in Pakistan and you can find them at lowest price.', NULL),
-(11, 'Smart Watch', 7000, 'assets/images/watch9.jpg', 'Shophive is the best place to buy Smart Watches in Pakistan and you can find them at lowest price.', NULL),
-(12, 'Smart Watch', 7000, 'assets/images/watch10.jpg', 'Shophive is the best place to buy Smart Watches in Pakistan and you can find them at lowest price.', NULL),
-(13, 'Smart Watch', 5670, 'assets/images/watch11.jpg', 'Shophive is the best place to buy Smart Watches in Pakistan and you can find them at lowest price.', NULL),
-(15, 'Smart Watch', 5670, 'assets/images/smartwatch12.webp', 'Shophive is the best place to buy Smart Watches in Pakistan and you can find them at lowest price.', NULL),
-(16, 'Smart Phone', 67000, 'assets/images/mobile1.webp', 'Get your hands on the hottest smartphones in Pakistan at MyShop.PK', NULL),
-(17, 'Smart Phone', 67000, 'assets/images/mobile2.webp', 'Get your hands on the hottest smartphones in Pakistan at MyShop.PK', NULL),
-(18, 'Smart Phone', 67000, 'assets/images/mobile3.webp', 'Get your hands on the hottest smartphones in Pakistan at MyShop.PK', NULL),
-(19, 'Smart Phone', 30000, 'assets/images/mobile4.png', 'Get your hands on the hottest smartphones in Pakistan at MyShop.PK', NULL),
-(20, 'Smart Phone', 30500, 'assets/images/mobile5.png', 'Get your hands on the hottest smartphones in Pakistan at MyShop.PK', NULL),
-(21, 'Smart Phone', 30500, 'assets/images/mobile6.png', 'Get your hands on the hottest smartphones in Pakistan at MyShop.PK', NULL),
-(22, 'Smart Phone', 30500, 'assets/images/mobile7.webp', 'Get your hands on the hottest smartphones in Pakistan at MyShop.PK', NULL),
-(23, 'Smart Phone', 50, 'assets/images/mobile8.webp', 'Get your hands on the hottest smartphones in Pakistan at MyShop.PK', NULL),
-(24, 'Airbuds', 800, 'assets/images/AP 01.png', 'Audionic is the largest distributor of Wireless Earbuds in Pakistan.', NULL),
-(25, 'Airbuds', 800, 'assets/images/AP 02.png', 'Audionic is the largest distributor of Wireless Earbuds in Pakistan.', NULL),
-(53, 'Shoes', 6003, 'assets/images/shoe2.jpeg', 'Fully Lined Supple Glove Leather Interior .', NULL);
+(55, 'Flat', 450, 'assets/images/Capture.PNG', 'Best Falt', 2);
 
 -- --------------------------------------------------------
 
@@ -298,7 +275,7 @@ ALTER TABLE `order_manager`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `purchase`
