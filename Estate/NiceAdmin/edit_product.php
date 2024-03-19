@@ -2,7 +2,7 @@
 include("header.php");
 ?>
 
-<div class="container">
+<!-- <div class="container pt-5">
     <form class="form w-50 mt-5 mx-auto" action=""></form>
 <h1 class="text-center  mx-auto mt-5">Edit Product</h1>
 <input   value="Id"  class="form-control p-1 mt-2" type="text" name="id"> 
@@ -12,9 +12,9 @@ include("header.php");
 <input value="Prod_Desc" class="form-control p-1 mt-2"type="text" name="Prod_Desc">
 </div>
 
-
+ -->
 
 
 <?php
-include("footer.php");
+// include("footer.php");
 ?>
