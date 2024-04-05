@@ -4,6 +4,7 @@ include("config.php");
 $id = $_GET["id"];
 ?>
 
+
 <div class="container mt-5">
     <div class="row mt-5">
     <form class="form w-50 mt-5 mx-auto" action="edit_product_backend.php"  method="POST" enctype="multipart/form-data">
@@ -19,6 +20,7 @@ $id = $_GET["id"];
 </form>
 
 
+
 <?php
-include("footer.php");
+// include("footer.php");
 ?>
