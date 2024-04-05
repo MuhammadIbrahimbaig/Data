@@ -14,7 +14,7 @@
 
 $imgname= $img['name'];
 $temppath = $img['tmp_name'];
-$mypath= "assets/images/".$imgname;
+$mypath= "assets/img/".$imgname;
 
 move_uploaded_file($temppath,$mypath);
 
