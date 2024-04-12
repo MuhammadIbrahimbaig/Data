@@ -3,7 +3,7 @@
 
 <?php
 
-    include("header.php");
+// include("header.php");
     include("config.php");
     $id = $_GET["id"];
     $edit_query = "SELECT * FROM users where user_id = '$id'";
@@ -11,7 +11,7 @@
     $row = mysqli_fetch_assoc($edit_result);
 ?>
      <br><br><br>
-<form method="post" action="editwork.php">
+<form method="post" action="edit.php">
  <div class="container text-center  mt-5">
    <h1 class="text-primary">Edit your data</h1>
  </div>
