@@ -2,10 +2,9 @@
 
 
 <?php
-
-// include("header.php");
+include("header.php");
     include("config.php");
-    $id = $_GET["id"];
+    // $id = $_GET["id"];
     $edit_query = "SELECT * FROM users where user_id = '$id'";
     $edit_result = mysqli_query($conn,$edit_query);
     $row = mysqli_fetch_assoc($edit_result);

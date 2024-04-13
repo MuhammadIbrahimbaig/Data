@@ -4,7 +4,7 @@ include("header.php");
 
 <div
       class="hero page-inner overlay"
-      style="background-image: url('images/hero_bg_1.jpg')"
+      style="background-image: url('images/pexels-sharath-g-7672061.jpg')"
     >
       <div class="container">
         <div class="row justify-content-center align-items-center">
@@ -17,7 +17,7 @@ include("header.php");
               data-aos-delay="200"
             >
               <ol class="breadcrumb text-center justify-content-center">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                 <li
                   class="breadcrumb-item active text-white-50"
                   aria-current="page"

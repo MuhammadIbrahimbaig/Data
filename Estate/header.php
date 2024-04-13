@@ -45,7 +45,7 @@ session_start();
       <div class="container">
         <div class="menu-bg-wrap">
           <div class="site-navigation">
-            <a href="index.php" class="logo m-0 float-start">Property</a>
+            <a href="index.php" class="logo m-0 float-start">Al Sheikh Estate </a>
 
             <ul
               class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"

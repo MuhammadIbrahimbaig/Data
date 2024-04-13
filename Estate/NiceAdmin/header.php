@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <title>Dashboard Estate </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -48,7 +48,7 @@
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.php" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">NiceAdmin</span>
+        <span class="d-none d-lg-block">Admin PAnel</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
@@ -269,3 +269,77 @@
     </nav><!-- End Icons Navigation -->
 
   </header><!-- End Header -->
+ <!-- ======= Sidebar ======= -->
+ <aside id="sidebar" class="sidebar">
+
+<ul class="sidebar-nav" id="sidebar-nav">
+
+  <li class="nav-item">
+    <a class="nav-link " href="index.php">
+      <i class="bi bi-grid"></i>
+      <span>Dashboard</span>
+    </a>
+  </li><!-- End Dashboard Nav -->
+
+  <li class="nav-item">
+    <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+      <i class="bi bi-menu-button-wide"></i><span>Add Products</span><i class="bi bi-chevron-down ms-auto"></i>
+    </a>
+    <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+      <li>
+       
+      <li>
+        <a href="addproduct.php">
+          <i class="bi bi-circle"></i><span>Add Products</span>
+        </a>
+        <a href="Prod_table.php">
+        <i class="bi bi-circle"></i><span>Pro Table</span>
+        </a>
+      </li>
+    <!-- <li>Product Table</li> -->
+    </ul>
+  </li><!-- End Components Nav -->
+
+  <li class="nav-heading">Pages</li>
+
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="#">
+      <i class="bi bi-person"></i>
+      <span>Profile</span>
+    </a>
+  </li><!-- End Profile Page Nav -->
+
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="pages-faq.html">
+      <i class="bi bi-question-circle"></i>
+      <span>F.A.Q</span>
+    </a>
+  </li><!-- End F.A.Q Page Nav -->
+
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="pages-contact.html">
+      <i class="bi bi-envelope"></i>
+      <span>Contact</span>
+    </a>
+  </li><!-- End Contact Page Nav -->
+
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="signup.php">
+      <i class="bi bi-card-list"></i>
+      <span>Register</span>
+    </a>
+  </li><!-- End Register Page Nav -->
+
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="login.php">
+      <i class="bi bi-box-arrow-in-right"></i>
+      <span>Login</span>
+    </a>
+  </li><!-- End Login Page Nav -->
+
+
+
+
+</ul>
+
+</aside><!-- End Sidebar-->

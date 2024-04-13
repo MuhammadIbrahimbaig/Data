@@ -4,7 +4,7 @@
 <!-- start about -->
     <div
       class="hero page-inner overlay"
-      style="background-image: url('images/hero_bg_3.jpg')"
+      style="background-image: url('images/pexels-expect-best-323780.jpg')"
     >
       <div class="container">
         <div class="row justify-content-center align-items-center">

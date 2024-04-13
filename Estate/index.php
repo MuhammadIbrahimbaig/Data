@@ -6,15 +6,15 @@ include("header.php");
       <div class="hero-slide">
         <div
           class="img overlay"
-          style="background-image: url('images/hero_bg_3.jpg')"
+          style="background-image: url('images/adam-winger-PCDlE94JjcI-unsplash.jpg')"
         ></div>
         <div
           class="img overlay"
-          style="background-image: url('images/hero_bg_2.jpg')"
+          style="background-image: url('images/ryan-lau-M_MmwcWBKJU-unsplash.jpg')"
         ></div>
         <div
           class="img overlay"
-          style="background-image: url('images/hero_bg_1.jpg')"
+          style="background-image: url('images/pexels-mehmet-turgut-kirkgoz-14526256.jpg')"
         ></div>
       </div>
 
