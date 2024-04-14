@@ -6,10 +6,11 @@ $result = mysqli_query($conn,$query);
 ?>
 
 
-    <table class = "table table-bordered p-2 w-75 mx-auto mt-5 table-hover ">
+    <table class = "table table-bordered p-5 w-50 mx-auto mt-5  table-hover ">
         <thead>
             <tr>
                 <br>
+            
                 <th>Product_ID</th>
                     <th>Product Name</th>
                     <th>Product Price</th>
