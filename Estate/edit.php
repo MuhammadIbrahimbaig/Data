@@ -4,12 +4,12 @@
     // $user_id = $_POST["user_id"];
     $user_name = $_POST["user_name"];
     $email = $_POST["email"];
-    $passwordd = $_POST["passwordd"];
+    $password = $_POST["password"];
     $address = $_POST["address"];
     $Phone = $_POST["Phone"];
     // $role = $_POST["role"];
 
-$edit_query = "UPDATE `users` SET `user_name`='$user_name',`email`='$email',`passwordd`='$passwordd',`address`='$adrress',`Phone`='$Phone' WHERE user_id = $id";
+$edit_query = "UPDATE `users` SET `user_name`='$user_name',`email`='$email',`password`='$password',`address`='$address',`Phone`='$Phone' WHERE user_id = $id";
 
 
 if($edit_result){

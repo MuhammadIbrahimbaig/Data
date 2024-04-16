@@ -12,7 +12,7 @@ if ($var) {
    $_SESSION['name']= $var['user_name'];
    $_SESSION['email']= $var['email'];
    $_SESSION['role']= $var ['role'];
-
+   $_SESSION['id']= $var ['user_id'];
    if($_SESSION['role']== 2){
     
     echo "<script>
