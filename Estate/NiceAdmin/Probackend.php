@@ -9,7 +9,6 @@
     $img= $_FILES["prodimage"];
 
    //  image SEt Working=================================
-// print_r($img);
 
 
 $imgname= $img['name'];

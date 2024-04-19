@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 14, 2024 at 11:13 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Apr 19, 2024 at 09:00 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -110,7 +110,9 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`prod_id`, `prodname`, `prodprice`, `prodimage`, `Prod_Desc`, `Prod_Category`) VALUES
-(55, 'Flat', 450, 'assets/images/Capture.PNG', 'Best Falt', 2);
+(58, 'Flat Best', 480000, 'assets/img/1 img.jpg', 'Al Sheikh Resideny Flat Available for sale 2 bedroom 1 Launch and open Kitchen.', 1),
+(60, 'ATS', 78800, 'assets/img/5 img.jpg', 'best', 1),
+(61, 'Flat', 980000, 'assets/img/product-2.jpg', 'Watch', 1);
 
 -- --------------------------------------------------------
 
@@ -157,10 +159,11 @@ INSERT INTO `users` (`user_id`, `user_name`, `email`, `passwordd`, `address`, `P
 (3, 'Ibrahim', 'xyz@gmail.com', 'abc123', 'lahore', '12345678908', 2),
 (5, 'asfand', 'xyz@gmail.com', '123', 'lahore', '12345678988', 2),
 (7, 'Mubsir', 'mubsir@gmail.com', 'mubsir', 'I block', '03172239904', 2),
-(20, 'hina', 'hina@gmail.com', 'hina', 'home', '09876546666', 2),
+(20, 'HUNAIN', 'hunain@gmail.com', '1234', 'home', '09876546666', 2),
 (21, 'Anus', 'anus@gmail.com', 'anus', 'home', '0312890973', 2),
 (22, 'hassan', 'hassan@gmail.com', 'hasan', 'Hadeed', '0987654567', 2),
-(25, 'admin', 'admin@gmail.com', 'estate', 'home', '4754354093', 1);
+(25, 'admin', 'admin@gmail.com', 'estate', 'home', '4754354093', 1),
+(26, 'ASFI', 'asfi@gmail.com', 'asfi', 'nazim', '09874374373', 2);
 
 -- --------------------------------------------------------
 
@@ -275,7 +278,7 @@ ALTER TABLE `order_manager`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT for table `purchase`
@@ -287,7 +290,7 @@ ALTER TABLE `purchase`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `user_orders`

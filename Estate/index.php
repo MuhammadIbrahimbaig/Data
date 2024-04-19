@@ -57,7 +57,7 @@ include("header.php");
                 href="#"
                 target="_blank"
                 class="btn btn-primary text-white py-3 px-4"
-                >View all properties</a
+                >View all properties</a>
               >
             </p>
           </div>
@@ -329,7 +329,7 @@ include("header.php");
         <div class="row justify-content-between mb-5">
           <div class="col-lg-7 mb-5 mb-lg-0 order-lg-2">
             <div class="img-about dots">
-              <img src="images/hero_bg_3.jpg" alt="Image" class="img-fluid" />
+              <img src="images\pexels-expect-best-323780.jpg" alt="Image" class="img-fluid" />
             </div>
           </div>
           <div class="col-lg-4">

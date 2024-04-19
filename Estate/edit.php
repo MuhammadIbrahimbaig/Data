@@ -16,7 +16,7 @@ $edit_result = mysqli_query($conn,$edit_query);
 
 if($edit_result){
     echo "value update";
-    // header("Location: index.php");
+    header("Location: index.php");
 }
 else {
     echo "not update";
