@@ -33,7 +33,7 @@ include("header.php");
               <input
                 type="text"
                 class="form-control px-4"
-                placeholder="Your ZIP code or City. e.g. New York"
+                placeholder="Your ZIP code or City. e.g. Karachi"
               />
               <button type="submit" class="btn btn-primary">Search</button>
             </form>
