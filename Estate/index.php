@@ -66,18 +66,18 @@ include("header.php");
           <div class="col-12">
             <div class="property-slider-wrap">
               <div class="property-slider">
-                <div class="property-item">
+                <div class="property-item h-50">
                   <a href="property-single.html" class="img">
-                    <img src="#" alt="Image" class="img-fluid" />
+                    <img src="images/img_4.jpg" alt="Image" class="img-fluid" />
                   </a>
 
                   <div class="property-content">
-                    <div class="price mb-2"><span>$1,291,000</span></div>
+                    <div class="price mb-2"><span>50,00,000</span></div>
                     <div>
                       <span class="d-block mb-2 text-black-50"
-                        >5232 California Fake, Ave. 21BC</span
+                        >Surjani Town Sector 4-D Near Green Bus Depot</span
                       >
-                      <span class="city d-block mb-3">California, USA</span>
+                      <span class="city d-block mb-3">Sindh, Karachi</span>
 
                       <div class="specs d-flex mb-4">
                         <span class="d-block d-flex align-items-center me-3">
@@ -91,32 +91,32 @@ include("header.php");
                       </div>
 
                       <a
-                        href="property-single.html"
+                        href="detail.php"
                         class="btn btn-primary py-2 px-3"
                         >See details</a
                       >
                     </div>
                   </div>
                 </div>
-                <!-- .item -->
+                <!-- 2nd.item -->
 
                 <div class="property-item">
-                  <a href="property-single.html" class="img">
-                    <img src="#" alt="Image" class="img-fluid" />
+                  <a href="property-single.html" class="img h-100">
+                    <img src="images/img_2.jpg" alt="Image" class="img-fluid" />
                   </a>
 
                   <div class="property-content">
-                    <div class="price mb-2"><span>$1,291,000</span></div>
+                    <div class="price mb-2"><span>180000 Lacs</span></div>
                     <div>
                       <span class="d-block mb-2 text-black-50"
-                        >5232 California Fake, Ave. 21BC</span
-                      >
-                      <span class="city d-block mb-3">California, USA</span>
+                        >Surjani Town Sector 4-D Near Green Bus Depot</span>
+                      
+                      <span class="city d-block mb-3">Sindh, Karchi</span>
 
                       <div class="specs d-flex mb-4">
                         <span class="d-block d-flex align-items-center me-3">
                           <span class="icon-bed me-2"></span>
-                          <span class="caption">2 beds</span>
+                          <span class="caption">2 Beds and DD </span>
                         </span>
                         <span class="d-block d-flex align-items-center">
                           <span class="icon-bath me-2"></span>
@@ -125,7 +125,7 @@ include("header.php");
                       </div>
 
                       <a
-                        href="property-single.html"
+                      href="detail.php"
                         class="btn btn-primary py-2 px-3"
                         >See details</a
                       >
@@ -135,17 +135,17 @@ include("header.php");
                 <!-- .item -->
 <!-- 3rd card -->
                 <div class="property-item">
-                  <a href="property-single.html" class="img">
-                    <img src="#" alt="Image" class="img-fluid" />
+                  <a href="property-single.html" class="img ">
+                    <img src="images/img_5.jpg" alt="Image" class=" card img img-fluid" />
                   </a>
 
                   <div class="property-content">
-                    <div class="price mb-2"><span>$1,291,000</span></div>
+                    <div class="price mb-2"><span>$34000</span></div>
                     <div>
                       <span class="d-block mb-2 text-black-50"
-                        >5232 California Fake, Ave. 21BC</span
+                        >Surjani Town Sector 4-D Near Green Bus Depot</span
                       >
-                      <span class="city d-block mb-3">California, USA</span>
+                      <span class="city d-block mb-3">Sindh, Karachi</span>
 
                       <div class="specs d-flex mb-4">
                         <span class="d-block d-flex align-items-center me-3">
@@ -159,28 +159,27 @@ include("header.php");
                       </div>
 
                       <a
-                        href="property-single.html"
+                      href="detail.php"
                         class="btn btn-primary py-2 px-3"
                         >See details</a
                       >
                     </div>
                   </div>
                 </div>
-                <!-- .item -->
-
+                <!-- 4th card -->
 
                 <div class="property-item">
                   <a href="property-single.html" class="img">
-                    <img src="#" alt="Image" class="img-fluid" />
+                    <img src="images/img_7.jpg" alt="Image" class="img-fluid" />
                   </a>
 
                   <div class="property-content">
                     <div class="price mb-2"><span>$1,291,000</span></div>
                     <div>
                       <span class="d-block mb-2 text-black-50"
-                        >5232 California Fake, Ave. 21BC</span
+                        >Surjani Town Sector 4-D Near Green Bus Depot</span
                       >
-                      <span class="city d-block mb-3">California, USA</span>
+                      <span class="city d-block mb-3">Sindh, Karchi</span>
 
                       <div class="specs d-flex mb-4">
                         <span class="d-block d-flex align-items-center me-3">
@@ -194,41 +193,7 @@ include("header.php");
                       </div>
 
                       <a
-                        href="property-single.html"
-                        class="btn btn-primary py-2 px-3"
-                        >See details</a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <!-- .item -->
-
-                <div class="property-item">
-                  <a href="property-single.html" class="img">
-                    <img src="#" alt="Image" class="img-fluid" />
-                  </a>
-
-                  <div class="property-content">
-                    <div class="price mb-2"><span>$1,291,000</span></div>
-                    <div>
-                      <span class="d-block mb-2 text-black-50"
-                        >5232 California Fake, Ave. 21BC</span
-                      >
-                      <span class="city d-block mb-3">California, USA</span>
-
-                      <div class="specs d-flex mb-4">
-                        <span class="d-block d-flex align-items-center me-3">
-                          <span class="icon-bed me-2"></span>
-                          <span class="caption">2 beds</span>
-                        </span>
-                        <span class="d-block d-flex align-items-center">
-                          <span class="icon-bath me-2"></span>
-                          <span class="caption">2 baths</span>
-                        </span>
-                      </div>
-
-                      <a
-                        href="property-single.html"
+                      href="detail.php"
                         class="btn btn-primary py-2 px-3"
                         >See details</a
                       >
@@ -329,7 +294,7 @@ include("header.php");
         <div class="row justify-content-between mb-5">
           <div class="col-lg-7 mb-5 mb-lg-0 order-lg-2">
             <div class="img-about dots">
-              <img src="images\pexels-expect-best-323780.jpg" alt="Image" class="img-fluid" />
+              <img src="images/new p1.jpg" alt="Image" class="img-fluid" />
             </div>
           </div>
           <div class="col-lg-4">

@@ -293,12 +293,31 @@
           <i class="bi bi-circle"></i><span>Add Products</span>
         </a>
         <a href="Prod_table.php">
-        <i class="bi bi-circle"></i><span>Pro Table</span>
+        <i class="bi bi-circle"></i><span>ProDuct Table</span>
         </a>
       </li>
     <!-- <li>Product Table</li> -->
     </ul>
   </li><!-- End Components Nav -->
+  <div class="contain">
+
+
+  <!-- EDIT WORKING -->
+ <!-- <li class="ms-3">EDIT WORK</li> -->
+ <li class="nav-item">
+    <a class="nav-link collapsed" href="#">
+      <i class="bi bi-user"></i>
+      <span>Edit </span>
+    </a>
+  </li>
+  <!-- end -->
+
+
+
+
+
+
+
 
   <li class="nav-heading">Pages</li>
 

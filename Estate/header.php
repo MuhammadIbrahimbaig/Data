@@ -51,6 +51,7 @@ session_start();
               class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
             >
               <li class="active"><a href="index.php">Home</a></li>
+
               <li><a href="about.php">About</a></li>
               <li><a href="contactus.php">Contact Us</a></li>
 
