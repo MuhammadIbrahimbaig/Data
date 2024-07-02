@@ -9,7 +9,7 @@
 
         $imgname= $img['name'];
         $temppath = $img ["tmp_name"];
-        $mypath = "assets/img/".$imgname;
+        $mypath = "assets/images/".$imgname;
 
 move_uploaded_file($temppath,$mypath);
 $query = "UPDATE `products` SET `prodname`='$prodname',`prodprice`='$prodprice',`prodimage`='$mypath',`Prod_Desc`='$Prod_Desc',`Prod_Category`='$Prod_Category' WHERE `prod_id` ='$id'";
