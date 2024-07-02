@@ -9,11 +9,12 @@
     $img= $_FILES["prodimage"];
 
    //  image SEt Working=================================
+// print_r($img);
 
 
 $imgname= $img['name'];
 $temppath = $img['tmp_name'];
-$mypath= "assets/img/".$imgname;
+$mypath= "assets/images/".$imgname;
 
 move_uploaded_file($temppath,$mypath);
 

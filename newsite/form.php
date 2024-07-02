@@ -16,7 +16,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+      
     <form class="form w-50 mt-5  mx-auto" action="user.php" method="GET">
         <h1 class="text-center ">SIGN UP USER</h1>
         <input class="form-control p-1 mt-2" placeholder="User name" type="text" name="user_name">
