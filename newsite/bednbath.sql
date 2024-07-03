@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 02, 2024 at 09:53 PM
+-- Generation Time: Jul 03, 2024 at 09:51 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -111,13 +111,13 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`prod_id`, `prodname`, `prodprice`, `prodimage`, `Prod_Desc`, `Prod_Category`) VALUES
-(64, 'BedSheet', 4000, 'assets/images/bedsheet 9.jpeg', 'Best Quality', 1),
-(65, 'bed 133', 2342, 'assets/images/bedsheet 1.jpeg', 'jjkjk', 1),
-(66, 'sdkcnsdk', 3243, 'assets/images/bedsheet 2.jpeg', 'dcksd', 1),
+(65, 'Bedsheet', 8000, 'assets/images/bedsheet 1.jpeg', 'Best Quality', 1),
+(66, 'Bedsheet', 49000, 'assets/images/bedsheet 2.jpeg', 'Best Quality', 1),
 (67, 'Towel', 0, 'assets/images/towel1.jpg', 'Best Quality', 2),
-(68, 'BedSheet', 6000, 'assets/images/bedsheet 6.jpeg', 'Best Quality', 1),
+(68, 'BedSheet', 6000, 'assets/images/bedsheet 3.jpeg', 'Best Quality', 1),
 (69, 'Comforter Set', 56700, 'assets/images/img 1.jpeg', 'Best Quality', 4),
-(70, 'Quilt Cover', 3422, 'assets/images/quilt 1.jpg', 'Best Quality', 3);
+(70, 'Quilt Cover', 3422, 'assets/images/quilt 1.jpg', 'Best Quality', 3),
+(71, 'Bedsheet', 25000, 'assets/images/bedsheet 4.jpeg', 'Best qualiy', 1);
 
 -- --------------------------------------------------------
 
@@ -292,7 +292,7 @@ ALTER TABLE `order_manager`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT for table `purchase`
