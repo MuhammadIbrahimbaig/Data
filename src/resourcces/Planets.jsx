@@ -9,6 +9,7 @@ export default function Planetsset() {
                 size: "4,880 km (diameter)",
                 distanceFromSun: "57.91 million km",
                 notableFeature: "Smallest planet and closest to the Sun",
+                image: "https://cdn.mos.cms.futurecdn.net/v2/t:0,l:0,cw:2800,ch:1575,q:80,w:2800/v5n22xGyNNHLzSnSArbrVH.jpg"
             },
             {
                 id: 2,
@@ -16,6 +17,7 @@ export default function Planetsset() {
                 size: "12,104 km (diameter)",
                 distanceFromSun: "108.2 million km",
                 notableFeature: "Hottest planet due to thick atmosphere",
+                image: 'https://shorturl.at/winYy',
             },
             {
                 id: 3,
@@ -23,6 +25,7 @@ export default function Planetsset() {
                 size: "12,742 km (diameter)",
                 distanceFromSun: "149.6 million km",
                 notableFeature: "Supports life and has abundant water",
+                image: 'https://shorturl.at/wN87z',
             },
             {
                 id: 4,
@@ -30,6 +33,7 @@ export default function Planetsset() {
                 size: "6,779 km (diameter)",
                 distanceFromSun: "227.9 million km",
                 notableFeature: "Known as the Red Planet with evidence of ancient water",
+                image: 'https://shorturl.at/Moc79',
             },
             {
                 id: 5,
@@ -37,6 +41,8 @@ export default function Planetsset() {
                 size: "139,820 km (diameter)",
                 distanceFromSun: "778.5 million km",
                 notableFeature: "Largest planet with a giant red storm",
+                image: 'https://shorturl.at/Moc79',
+
             },
             {
                 id: 6,
@@ -44,6 +50,8 @@ export default function Planetsset() {
                 size: "116,460 km (diameter)",
                 distanceFromSun: "1.434 billion km",
                 notableFeature: "Famous for its stunning ring system",
+                image: 'https://shorturl.at/winYy',
+
             },
             {
                 id: 7,
@@ -51,6 +59,8 @@ export default function Planetsset() {
                 size: "50,724 km (diameter)",
                 distanceFromSun: "2.871 billion km",
                 notableFeature: "Rotates on its side with a faint ring system",
+                image: 'https://shorturl.at/winYy',
+
             },
             {
                 id: 8,
@@ -58,18 +68,20 @@ export default function Planetsset() {
                 size: "49,244 km (diameter)",
                 distanceFromSun: "4.495 billion km",
                 notableFeature: "Strongest winds in the Solar System",
+                image: 'https://shorturl.at/winYy',
+
             }
         ]
     let [search, setUsearch] = useState("");
     let [sort, setUsort] = useState("");
     let filter_planets = search ? Planets.filter((a) => a.name.toLowerCase().includes(search.toLowerCase())) : Planets
-    if (sort === '1') {
-        filter_planets = filter_planets.sort((a, b) => a.size - b.size)
-    }
-    else if (sort === '2') {
-        filter_planets = filter_planets.sort((a, b) => b.size - a.size)
-    }
-    else if (sort === '3') {
+    // if (sort === '1') {
+    //     filter_planets = filter_planets.sort((a, b) => a.size - b.size)
+    // }
+    // else if (sort === '2') {
+    //     filter_planets = filter_planets.sort((a, b) => b.size - a.size)
+    // }
+    if (sort === '3') {
         filter_planets = filter_planets.sort((a, b) => a.name.localeCompare(b.name))
     }
     else if (sort === '4') {
@@ -83,13 +95,15 @@ export default function Planetsset() {
                 <div className="d-flex justify-content-center">
                     <select name="" id="" className='w-100 form-control' onChange={(a) =>
                         setUsort(a.target.value)}>
-                            <option value="">Select</option>
-                            <option value="1">Name:</option>
+                        <option value="">Select</option>
+                        <option value="1">Name sort(a-z)</option>
+                        <option value="2">Name sort(z-a)</option>
 
-                        </select>
+
+                    </select>
                 </div>
 
-                <input type="search" onChange={(a) => setUsearch(a.target.value)} className="form-control mt-3" placeholder="Search Planet" />
+                <input type="search" onChange={(a) => setUsort(a.target.value)} className="form-control mt-3" placeholder="Search Planet" />
                 <div className="row">
                     {
                         Planets.map((a) => (
@@ -97,7 +111,7 @@ export default function Planetsset() {
                                 <div class="col">
                                     <a href="" className="text-decoration-none">
                                         <div class="card rounded-3 border border-black ">
-                                            {/* <img src={a.image} className="set-h img-fluid object-fit-cover rounded-top-3" alt="..." /> */}
+                                            <img src={a.image} className="set-h img-fluid object-fit-cover rounded-top-3" alt="..." />
                                             <div class="card-body hover-set">
                                                 <h5 class="card-title text-start border-bottom border-2 border-black">{a.name}</h5>
                                                 <div className="text-start ">

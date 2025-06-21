@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 export default function Formdata() {
+    
     let [uname, setUname] = useState("")
     let [uemail, setUeamil] = useState("")
     let [phonenumber, setPhonenumber] = useState("")

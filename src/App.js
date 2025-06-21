@@ -7,15 +7,25 @@ import Formdata from './resourcces/Form';
 import Arraywork from './resourcces/Arraywork';
 import Planetsset from './resourcces/Planets';
 import { useState } from 'react';
+import Jobform from './resourcces/Jobform';
 
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
+      <Routes>
+      <Route path='/form' element={<Formdata/>}></Route>
+      <Route path='/array' element={<Arraywork/>}></Route>
+      <Route path='/planet' element={<Planetsset/>}></Route>
+      <Route path='/job' element={<Jobform/>}></Route>
       {/* <Formdata/> */}
       {/* <Arraywork/> */}
-      <Planetsset />
+      {/* <Planetsset /> */}
+      </Routes>
     </div>
+    
+    </BrowserRouter>
   );
 }
 
