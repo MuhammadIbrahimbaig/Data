@@ -14,7 +14,7 @@ export default function Signup() {
         try {
             let url = "https://685b848289952852c2d9d00d.mockapi.io/users/Users";
 
-            axios.post(url, {
+            axios.post(url, { 
                 name: name,
                 email: email,
                 password: password,
