@@ -55,7 +55,6 @@ export default function Signup(){
       <label for="password" class="form-label">Password</label>
       <input type="password" class="form-control" value={password} onChange={(a)=>setPassword(a.target.value)} placeholder="Enter a password"/>
     </div>
-
     {/* <!-- Gender --> */}
     <div class="mb-3">
       <label class="form-label d-block">Gender</label>
