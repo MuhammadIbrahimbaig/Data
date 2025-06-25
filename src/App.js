@@ -8,11 +8,11 @@ import Signup from './components/Registration';
 function App() {
   return (
     <div className="App">
-    <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Signup/>} />
-    </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Signup />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
