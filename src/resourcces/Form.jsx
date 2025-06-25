@@ -6,6 +6,21 @@ export default function Formdata() {
     let [address, setAddress] = useState("")
     let [city, setCity] = useState("")
     let [gender, setGender] = useState("")
+    //Hobby
+    let [hobby, setHobby] = useState([])
+    function get_checkbox_value(e) {
+        let { checked, value } = e.target
+        if (checked) {
+            setHobby([...hobby, value])
+        }
+        else {
+            setHobby(hobby.filter((a) => a != value))
+        }
+    }
+    // end hobby
+    // Img State
+    let [getfile, setGetfile] = useState("")
+    let [showimg, setShowimg] = useState("")
 
 
     // for getting values
@@ -16,6 +31,7 @@ export default function Formdata() {
         console.log(`Address is ${address}`)
         console.log(`City is ${city}`)
         console.log(`Gender is ${gender}`);
+        console.log(`Hobbies is ${hobby.join(" , ")}`);
 
         setUname("")
         setUeamil("")
@@ -23,9 +39,17 @@ export default function Formdata() {
         setAddress("")
         setCity("")
         setGender("")
+        setHobby("")
     }
     function radiobtn(abc) {
         setGender(abc.target.value)
+    }
+    function FileuploadWork(e) {
+        let data = e.target.files[0]
+        if (data) {
+            setGetfile(data)
+            setShowimg(URL.createObjectURL(data))
+        }
     }
     return (
         <div className="container">
@@ -64,8 +88,17 @@ export default function Formdata() {
 
             <input type="radio" name="gender" value="others" onChange={radiobtn} checked={gender === "others"} />Others
             <br />
+            <p className='mt-4'>Select Your Hobbies</p>
+            <input type="checkbox" name="cricket" value="cricket" onChange={get_checkbox_value} />&nbsp;Cricket&nbsp;
+            <input type="checkbox" name="Dancing" value="Dancing" onChange={get_checkbox_value} />&nbsp;Dancing&nbsp;
+            <input type="checkbox" name="Singing" value="Singing" onChange={get_checkbox_value} />&nbsp;Singing&nbsp;
+            <br />
 
-
+            {/* image sec */}
+            <p>Upload Img</p>
+            <input type="file" onChange={FileuploadWork} />
+            <img src={showimg} alt="" height="100" />
+            <br />
 
 
 

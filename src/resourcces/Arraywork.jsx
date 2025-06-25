@@ -1,6 +1,10 @@
 import { useState } from "react"
+import { useLocation } from "react-router-dom"
 
 export default function Arraywork() {
+    let recv = useLocation();
+    let email = recv.state?.ueamil || "Guest"
+
     let product = [
         {
             id: 1, prodname: "Watch", prodcat: "Watches", price: 2000, brand: "Rolex", image: "https://shorturl.at/k2JpR"
@@ -29,20 +33,21 @@ export default function Arraywork() {
     ]
     // search
     let [search, setSearch] = useState("")
-    let[sort, setUsort] = useState("")
+    let [sort, setUsort] = useState("")
     let filter_product = search ? product.filter((a) => a.prodname.toLowerCase().includes(search.toLowerCase())) : product
-    if (sort==='1') {
-        filter_product=filter_product.sort((a,b) => a.price - b.price)
+    if (sort === '1') {
+        filter_product = filter_product.sort((a, b) => a.price - b.price)
     }
-    else if (sort==='2') {
-        filter_product=filter_product.sort((a,b) => b.price - a.price)
+    else if (sort === '2') {
+        filter_product = filter_product.sort((a, b) => b.price - a.price)
     }
-    else if (sort==='3') {
-        filter_product=filter_product.sort((a,b) => a.prodname.localeCompare(b.prodname))
+    else if (sort === '3') {
+        filter_product = filter_product.sort((a, b) => a.prodname.localeCompare(b.prodname))
     }
-    else if (sort==='4') {
-        filter_product=filter_product.sort((a,b) => b.prodname.localeCompare(a.prodname))
+    else if (sort === '4') {
+        filter_product = filter_product.sort((a, b) => b.prodname.localeCompare(a.prodname))
     }
+
     return (
         <div>
             <div className="container">
@@ -61,6 +66,8 @@ export default function Arraywork() {
                 </div>
 
                 <input type="text" className="form-control mt-3" placeholder="Search a Best Quality Product" value={search} onChange={(e) => setSearch(e.target.value)} />
+
+
                 <div className="row">
                     {
                         filter_product.length > 0 ?
@@ -86,6 +93,7 @@ export default function Arraywork() {
                                     </div>
 
                                 </div>
+
                             ))
                             :
                             <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
