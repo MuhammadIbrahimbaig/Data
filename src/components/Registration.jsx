@@ -1,11 +1,14 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import("react-toastify/dist/ReactToastify.css");
 export default function Signup() {
     let [name, setUname] = useState("");
     let [email, setUemail] = useState("");
     let [password, setPassword] = useState("");
     let [gender, setgender] = useState("");
     let [rel, setReligion] = useState("");
+
     //Gender
     function SetRadiovalue(e) {
         setgender(e.target.value)
@@ -13,8 +16,22 @@ export default function Signup() {
     function save_data() {
         try {
             let url = "https://685b848289952852c2d9d00d.mockapi.io/users/Users";
+            let uname_regex = /^[a-zA-Z\s]{3,20}$/;
+            let upassword_regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+            if (!name || !email || !password || !gender || !rel) {
+                toast.error("All fields are required");
+                return;
+            }
+            if (!uname_regex.test(name)) {
+                toast.error("Please enter a valid name");
+                return;
+            }
+            if (!upassword_regex.test(password)) {
+                toast.error("Please enter a valid password");
+                return;
+            }
 
-            axios.post(url, { 
+            axios.post(url, {
                 name: name,
                 email: email,
                 password: password,
@@ -22,19 +39,25 @@ export default function Signup() {
                 rel: rel
             }).then(() => {
                 alert("Data is Save")
+                clear()
+
+            })
+            function clear() {
                 setUname("");
                 setUemail("");
                 setPassword("");
                 setgender("");
                 setReligion("");
-
-            })
+            }
         } catch (error) {
             console.log(error.message);
         }
     }
     return (
         <div>
+            <ToastContainer/>
+
+           
             <div class="container mt-5 col-lg-4 bg-secondary-subtle">
                 <h2 class="mb-4">Registration Form</h2>
 
@@ -77,7 +100,9 @@ export default function Signup() {
                 </div>
                 {/* 
     <!-- Submit Button --> */}
-                <button type="button" onClick={save_data} class="btn btn-outline-black">Save Data</button>
+                <div className="mb-3">
+                    <button type="button" onClick={save_data} class="btn text-white  bg-black">Save Data</button>
+                </div>
 
             </div>
         </div>
