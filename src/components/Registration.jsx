@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import("react-toastify/dist/ReactToastify.css");
 export default function Signup() {
@@ -55,25 +56,28 @@ export default function Signup() {
     }
     return (
         <div>
-            <ToastContainer/>
+            <div className="container">
+                <Link to="/showdata" className="btn custom-btn mt-3" type="submit">Show Record</Link>
+            </div>
+            <ToastContainer />
 
-           
-            <div class="container mt-5 col-lg-4 bg-secondary-subtle">
-                <h2 class="mb-4">Registration Form</h2>
+
+            <h2 class="text-uppercase">Registration Form</h2>
+            <div class="container custom-btn-main mt-5 col-lg-4 bg-secondary-subtle rounded-4 py-3 border border-black">
 
                 {/* <!-- Name --> */}
                 <div class="mb-3">
-                    <input type="text" class="form-control" value={name} onChange={(a) => setUname(a.target.value)} placeholder="Enter your name" />
+                    <input type="text" class="form-control shadow-none border border-2 border-black" value={name} onChange={(a) => setUname(a.target.value)} placeholder="Enter your name" />
                 </div>
 
                 {/* <!-- Email / */}
                 <div class="mb-3">
-                    <input type="email" class="form-control" value={email} onChange={(a) => setUemail(a.target.value)} placeholder="Enter your email" />
+                    <input type="email" class="form-control shadow-none border border-2 border-black" value={email} onChange={(a) => setUemail(a.target.value)} placeholder="Enter your email" />
                 </div>
 
                 {/* <!-- Password --> */}
                 <div class="mb-3">
-                    <input type="password" class="form-control" value={password} onChange={(a) => setPassword(a.target.value)} placeholder="Enter a password" />
+                    <input type="password" class="form-control shadow-none border border-2 border-black" value={password} onChange={(a) => setPassword(a.target.value)} placeholder="Enter a password" />
                 </div>
                 {/* <!-- Gender --> */}
                 <div class="mb-3">
@@ -89,7 +93,7 @@ export default function Signup() {
 
                 {/* <!-- Religion --> */}
                 <div class="mb-3">
-                    <select class="form-select" onChange={(e) => setReligion(e.target.value)}>
+                    <select class="form-select shadow-none border border-2 border-black" onChange={(e) => setReligion(e.target.value)}>
                         <option selected disabled>Select your religion</option>
                         <option value="islam">Islam</option>
                         <option value="christianity">Christianity</option>
@@ -101,7 +105,7 @@ export default function Signup() {
                 {/* 
     <!-- Submit Button --> */}
                 <div className="mb-3">
-                    <button type="button" onClick={save_data} class="btn text-white  bg-black">Save Data</button>
+                    <button type="button" onClick={save_data} class="btn custom-btn fw-bold">Save Data</button>
                 </div>
 
             </div>

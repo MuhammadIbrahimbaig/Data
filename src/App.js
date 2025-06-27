@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Signup from './components/Registration';
 import Jobapplication from './components/Jobform';
+import Read_data from './components/Read';
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Signup />} />
           <Route path='/Jobapp' element={<Jobapplication />} />
+          <Route path='/showdata' element={<Read_data />} />
+
 
         </Routes>
       </BrowserRouter>
