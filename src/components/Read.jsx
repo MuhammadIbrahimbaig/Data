@@ -1,7 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
 import { Link } from 'react-router-dom';
+import { toast } from "react-toastify";
 export default function Read_data() {
+    let [id, setId] = useState("");
+    let [name, setUname] = useState("");
+    let [email, setUemail] = useState("");
+    let [password, setPassword] = useState("");
+    let [gender, setgender] = useState("");
+    let [rel, setReligion] = useState("");
     let [recv, setRecv] = useState([]);
     let [search, setSearch] = useState("");
     let [sort, setSort] = useState("");
@@ -19,7 +26,37 @@ export default function Read_data() {
     else if (sort === "4") {
         filter_search = filter_search.sort((a, b) => b.email.localeCompare(a.email))
     }
-    useEffect(() => {
+    function Update_work() {
+        let url = "https://685b7b2f89952852c2d9ac21.mockapi.io/studentdata/user";
+        try {
+            axios.put(`${url}/${id}`, {
+                name: name,
+                email: email,
+                password: password,
+                gender: gender,
+                religion: rel
+            }).then(() => {
+                Showdata();
+                toast.success("Record Updated")
+            }).catch((e) => {
+                toast.error(e.message)
+
+            })
+
+        } catch (error) {
+            toast.error(error.message)
+
+        }
+    }
+    function setInput(name, email, password, gender, rel) {
+        setUname(name)
+        setUemail(email)
+        setPassword(password)
+        setgender(gender)
+        setReligion(rel)
+        setId(id)
+    }
+    function Showdata() {
         try {
             let url = "https://685b848289952852c2d9d00d.mockapi.io/users/Users";
             axios.get(url).then((res) => {
@@ -30,8 +67,28 @@ export default function Read_data() {
         } catch (error) {
             console.log(error.message);
         }
+    }
+    useEffect(() => {
+        Showdata();
     }, [])
+    // DLT
+    function Delete_data(id) {
+        try {
+            let url = "https://685b848289952852c2d9d00d.mockapi.io/users/Users"
+            if (window.confirm("Are you sure dlt the record")) {
+                axios.delete(`${url}/${id}`).
+                    then(() => {
+                        Showdata();
+                        toast.success("Record Deleted")
+                    }).catch((e) => {
+                        console.log(e.message)
+                    })
+            }
+        } catch (error) {
+            toast.error(error.message)
+        }
 
+    }
     return (
         <div className="container">
             <Link to="/" type="button" className="btn custom-btn  mt-3">Add User</Link>
@@ -60,6 +117,8 @@ export default function Read_data() {
                         <th>Email</th>
                         <th>Gender</th>
                         <th>Religion</th>
+                        <th>Update</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -71,6 +130,8 @@ export default function Read_data() {
                                 <td>{item.email}</td>
                                 <td>{item.gender}</td>
                                 <td>{item.rel}</td>
+                                <td><i class="bi bi-pencil" onClick={() => setInput(item.name, item.email, item.password, item.gender, item.rel)} data-bs-toggle="modal" data-bs-target="#exampleModal"></i></td>
+                                <td><i class="bi bi-trash" onClick={() => Delete_data(item.id)}> </i></td>
                             </tr>
                         ))
                     ) : (
@@ -85,7 +146,53 @@ export default function Read_data() {
 
                 </tbody>
             </table>
+            
 
-        </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 text-center w-100" id="exampleModalLabel">Update The Data</h1>
+                            <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body bg-black text-white ">
+                            <input type="text" className="form-control shadow-none mt-3" value={name} onChange={(e) => setUname(e.target.value)} />
+                            <input type="text" className="form-control shadow-none mt-3" value={email} onChange={(e) => setUemail(e.target.value)} />
+                            <input type="text" className="form-control shadow-none mt-3" value={password} onChange={(e) => setPassword(e.target.value)} />
+                            <p>Select Gender</p>
+                            <input type="radio" name="gender" value="m" onChange={(e) => setgender(e.target.value)} checked={gender === "m"} />&nbsp;Male&nbsp;
+                            <input type="radio" name="gender" value="fm" onChange={(e) => setgender(e.target.value)} checked={gender === "fm"} />&nbsp; Female&nbsp;
+                            <br />
+                            {/* dropdown */}
+                            <select className="form-control shadow-none" onChange={(e) => setReligion(e.target.value)}>
+                                <option value="Islam" selected={rel === 'Islam'}>Islam</option>
+                                <option value="Hindu" selected={rel === 'Hindu'}>Hindu</option>
+                                <option value="Buddisham" selected={rel === 'Buddisham'}>Buddisham</option>
+
+                            </select>
+                        </div>
+                        <div class="py-3 d-flex justify-content-center gap-2 bg-black rounded-bottom-5">
+                            <div className="">
+                                <button type="button" class="btn btn-danger " data-bs-dismiss="modal">Close</button>
+                            </div>
+                            <div className="">
+                                <button
+                                    type="button"
+                                    className="btn custom-btn close"
+                                    onClick={() => {
+                                        Update_work();
+                                        document.querySelector('.close')?.click();  
+                                    }}
+                                >
+                                    Save changes
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div >
     )
 }
