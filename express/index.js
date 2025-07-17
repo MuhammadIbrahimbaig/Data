@@ -1,20 +1,15 @@
-require("dotenv").config();
+const express = require("express");
+const cors = require("cors");
 
-const cors = require ("cors");
-const exp = require("express");
-const port_no = process.env.PORT || 4001
-const db_url=require("./dbconnection")
-const router = require("./Routes/route")
+const app = express();
+const port = 4001;
 
-const app = exp();
-app.use(cors())
-app.use(exp.json())
-app.use("/",router);
+app.use(cors());
+app.use(express.json());
 
-db_url().then(()=>{
-    app.listen(port_no , function(){
-        console.log(` server started at http://localhost:${port_no}/`);
-    })
-}).catch ((e)=>{
-    console.log(e)
-})
+const route = require("./Routes/route");
+app.use("/", route); // ✅ Must be used to activate /save
+
+app.listen(port, () => {
+  console.log(`Server started at http://localhost:${port}`);
+});

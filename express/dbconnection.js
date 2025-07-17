@@ -10,7 +10,7 @@ const Database_Connect = async function (){
         console.log("Database Connected");
 
     }catch(error){
-        console.log(error)
+        console.log("DB Not Connect")
         }
     }
 }

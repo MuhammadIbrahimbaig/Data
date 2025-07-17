@@ -1,8 +1,8 @@
-let routing = require("../Controller/function")
-let exp = require("express")
-let router = exp.Router();
+const express = require("express");
+const router = express.Router();
+const UserController = require("../Controller/function");
 
-router.post("/", routing.Register)      // 👈 POST request on "/"
-router.get("/b", routing.login)         // 👈 GET request on "/b"
+router.post("/save", UserController.Register); 
 
-module.exports = router
+
+module.exports = router;
