@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Create } from './Components/Create';
+import Read from './Components/Read';
+ 
 
 function App() {
   return (
@@ -10,6 +12,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<Create/>} />
+      <Route path='/read' element={<Read/>} />
     </Routes>
     </BrowserRouter>
     </div>
