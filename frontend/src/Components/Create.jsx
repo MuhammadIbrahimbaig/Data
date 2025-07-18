@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify'
 
 export const Create = () => {
     const [name, setName] = useState("")
@@ -9,17 +10,33 @@ export const Create = () => {
 
     async function SubmitFunc() {
         try {
-            await
-                await axios.post("http://localhost:4001/save", {
-                    Name: name,
-                    Email: email,
-                    Passw: passw,
-                    Age: age
-                }).then(() => {
-                    alert("Data Saved Succesfully")
-                }).catch((e) => {
-                    console.log(e.message)
-                })
+            // REGEX
+            let user_regex = /^[a-zA-Z]{2,15}$/
+            let pswd_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (!name || !email || !passw || age <= 0) {
+                toast.error("All fields are required")
+                return;
+            }
+            if (!user_regex.test(name)) {
+                toast.error("Invalid Username!")
+                return;
+            }
+            if (!pswd_regex.test(passw)) {
+                toast.error("Password must be strong!")
+                return;
+            }
+
+            await axios.post("http://localhost:4001/save", {
+                name: name,
+                email: email,
+                password: passw,
+                age: age
+            }).then(() => {
+                alert("Data Saved Succesfully")
+            }).catch((e) => {
+                console.log(e,"error")
+                toast.error(e?.response?.data.msg)
+            })
 
         } catch (error) {
             console.log(error)
@@ -29,6 +46,7 @@ export const Create = () => {
     }
     return (
         <div>
+            <ToastContainer/>
             <div className="container d-flex justify-content-center align-items-center min-vh-100 bg-light">
                 <div className="card p-4 shadow-lg" style={{ maxWidth: "450px", width: "100%" }}>
                     <h3 className="text-center mb-4 text-primary">
