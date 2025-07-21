@@ -10,36 +10,57 @@ export default function Read() {
             .catch(err => console.log(err))
     })
     return (
-        <div>
-            <div className="container">
-                <table className="table">
-                    <thead>
+        <div className="container my-5">
+            <h2 className="mb-4 text-center text-primary">User Management</h2>
+            <div className="table-responsive shadow rounded">
+                <table className="table table-striped table-hover align-middle">
+                    <thead className="table-dark">
                         <tr>
                             <th scope="col">Name</th>
                             <th scope="col">Email</th>
                             <th scope="col">Address</th>
-                            <th scope="col">Age</th>
-                            <th scope="col">Action</th>
+                            <th scope="col" style={{ width: '80px' }}>Age</th>
+                            <th scope="col" style={{ width: '160px' }}>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {
-                            users.map((user, index) => (
-                                <tr key={index}>
-                                    <td>{user.name}</td>
-                                    <td>{user.email}</td>
-                                    <td>{user.address}</td>
-                                    <td>{user.age}</td>
-                                    <td>
-                                        <button className="btn btn-outline-success me-2">Edit</button>
-                                        <button className="btn btn-outline-danger">Delete</button>
-                                    </td>
-                                </tr>
-                            ))
-                        }
+                        {users.map((user) => (
+                            <tr key={user.id}>
+                                <td>
+                                    <div className="d-flex align-items-center">
+                                        <div
+                                            className="rounded-circle bg-primary text-white d-flex justify-content-center align-items-center me-3"
+                                            style={{ width: 40, height: 40, fontWeight: 'bold', fontSize: '1.1rem' }}
+                                            title={user.name}
+                                        >
+                                            {user.name.charAt(0).toUpperCase()}
+                                        </div>
+                                        <span>{user.name}</span>
+                                    </div>
+                                </td>
+                                <td>{user.email}</td>
+                                <td>{user.address}</td>
+                                <td>{user.age}</td>
+                                <td>
+                                    <button
+                                        className="btn btn-sm btn-outline-success me-2"
+
+                                    >
+                                        <i className="bi bi-pencil-fill me-1"></i> Edit
+                                    </button>
+                                    <button
+                                        className="btn btn-sm btn-outline-danger"
+
+                                    >
+                                        <i className="bi bi-trash-fill me-1"></i> Delete
+                                    </button>
+                                </td>
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
             </div>
         </div>
+
     );
 }
