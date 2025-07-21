@@ -1,5 +1,17 @@
+let mail = require("nodemailer");
+require("dotenv").config();
+
 const User = require("../Collection/User");
 let crypt = require("bcrypt");
+// For Sending Email User Registartion
+let secure_info = mail.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL,
+    pass: process.env.PASSKEY
+  }
+})
+
 let data = {
   Register: async function (req, res) {
     try {
@@ -13,7 +25,24 @@ let data = {
         console.log(hashed_p);
         let Users = new User({ name, email, password: hashed_p, age });
         await Users.save();
-        res.status(200).json({ msg: "Data inserted!" });
+        res.status(200).json({ msg: "User Registration Succesfully!" });
+
+        // For Sending Email User Registartion
+        let EmailBodyInfo = {
+          to: email,
+          from: process.env.EMAIL,
+          subject: "Account has been Registered!",
+          html: `<h3>Hello ${name}</h3><br/><P>Your account has been created!`
+
+        }
+        secure_info.sendMail(EmailBodyInfo, function (e, i) {
+          if (e) {
+            console.log(e);
+          }
+          else {
+            console.log("Email Has been Sent");
+          }
+        })
       }
 
     } catch (error) {
@@ -21,6 +50,7 @@ let data = {
       console.log(error);
     }
   },
+
   read: async function (req, res) {
     try {
       const users = await User.find()
@@ -30,5 +60,8 @@ let data = {
     }
   },
 };
+
+
+
 
 module.exports = data;
