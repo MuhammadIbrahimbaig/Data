@@ -9,6 +9,26 @@ export default function Read() {
             .then(result => setUsers(result.data))
             .catch(err => console.log(err))
     })
+    // Sorting
+    let [recv, setRecv] = useState("");
+    let [search, setSearch] = useState("");
+    let [sort, setSort] = useState("");
+    // function
+    let filter_search = search ? recv.filter((a) => a.name.toLowerCase().includes(search.toLowerCase())) : recv
+    // Filter
+    if (sort === "1") {
+        filter_search = filter_search.sort((a, b) => a.name.localCompare(b.name))
+    }
+    else if(sort === "2"){
+        filter_search = filter_search.sort((a, b) => a.name.localCompare(a.name))
+    }
+    else if(sort === "3"){
+        filter_search = filter_search.sort((a, b) => a.email.localCompare(a.email)) 
+    }
+     else if(sort === "4"){
+        filter_search = filter_search.sort((a, b) => a.email.localCompare(b.email)) 
+    }
+    
     return (
         <div className="container my-5">
             <h2 className="mb-4 text-center text-primary">User Management</h2>

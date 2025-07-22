@@ -11,7 +11,7 @@ let secure_info = mail.createTransport({
     pass: process.env.PASSKEY
   }
 })
-
+// Insert Data
 let data = {
   Register: async function (req, res) {
     try {
@@ -50,7 +50,7 @@ let data = {
       console.log(error);
     }
   },
-
+  // Show Data
   read: async function (req, res) {
     try {
       const users = await User.find()
