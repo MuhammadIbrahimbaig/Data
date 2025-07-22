@@ -55,6 +55,7 @@ let data = {
     try {
       const users = await User.find()
       res.json(users);
+      // setRecv(res.data);
     } catch (error) {
       res.status(500).json({ m: error.message })
     }

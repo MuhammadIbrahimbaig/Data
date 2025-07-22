@@ -7,6 +7,7 @@ export default function Read() {
     useEffect(() => {
         axios.get('http://localhost:4001/read')
             .then(result => setUsers(result.data))
+            // setRecv(res.data)
             .catch(err => console.log(err))
     })
     // Sorting
@@ -19,18 +20,34 @@ export default function Read() {
     if (sort === "1") {
         filter_search = filter_search.sort((a, b) => a.name.localCompare(b.name))
     }
-    else if(sort === "2"){
+    else if (sort === "2") {
         filter_search = filter_search.sort((a, b) => a.name.localCompare(a.name))
     }
-    else if(sort === "3"){
-        filter_search = filter_search.sort((a, b) => a.email.localCompare(a.email)) 
+    else if (sort === "3") {
+        filter_search = filter_search.sort((a, b) => a.email.localCompare(a.email))
     }
-     else if(sort === "4"){
-        filter_search = filter_search.sort((a, b) => a.email.localCompare(b.email)) 
+    else if (sort === "4") {
+        filter_search = filter_search.sort((a, b) => a.email.localCompare(b.email))
     }
-    
+
     return (
         <div className="container my-5">
+            <div className="row">
+                <div className="col-md-6">
+                    <input type="text" placeholder="Search User" className="form-control" onChange={(e) => setSearch(e.target.value)} />
+                </div>
+                <div className="col-md-6">
+                    <div class="mb-3">
+                        <select class="form-select shadow-none border border-2 border-black" onChange={(e) => setSort(e.target.value)}>
+                            <option selected disabled>Select Filter</option>
+                            <option value="1">Sort By Name(A-Z)</option>
+                            <option value="2">Sort By Name(Z-A)</option>
+                            <option value="3">Sort By Email(A-Z)</option>
+                            <option value="4">Sort By Email(Z-A)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
             <h2 className="mb-4 text-center text-primary">User Management</h2>
             <div className="table-responsive shadow rounded">
                 <table className="table table-striped table-hover align-middle">
