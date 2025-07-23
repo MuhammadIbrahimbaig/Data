@@ -67,7 +67,7 @@ export default function Read() {
                         <tr>
                             <th scope="col">Name</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Address</th>
+                            <th scope="col">City</th>
                             <th scope="col" style={{ width: '80px' }}>Age</th>
                             <th scope="col" style={{ width: '160px' }}>Actions</th>
                         </tr>
@@ -88,18 +88,18 @@ export default function Read() {
                                     </div>
                                 </td>
                                 <td>{user.email}</td>
-                                <td>{user.address}</td>
+                                <td>{user.city}</td>
                                 <td>{user.age}</td>
                                 <td>
                                     <button
-                                        className="btn btn-sm btn-outline-success me-2"
+                                        className="btn btn-sm text-success me-2"
 
                                     >
-                                        <i className="bi bi-pencil-fill me-1"></i> Edit
+                                        <i className="bi bi-pencil-fill me-1"></i> 
                                     </button>
                                     <button
-                                        className="btn btn-sm btn-outline-danger" onClick={()=>{DeleteRecord(user._id,user.name)}}>
-                                        <i className="bi bi-trash-fill me-1"></i> Delete
+                                        className="btn btn-sm text-danger" onClick={()=>{DeleteRecord(user._id,user.name)}}>
+                                        <i className="bi bi-trash-fill me-1"></i> 
                                     </button>
                                 </td>
                             </tr>
