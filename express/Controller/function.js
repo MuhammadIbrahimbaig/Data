@@ -60,6 +60,22 @@ let data = {
       res.status(500).json({ m: error.message })
     }
   },
+  // DLt
+  DeleteRecord : async  function(req, res){
+    try {
+      let { id } = req.params
+      let find = await User.findById(id)
+      if (!find) {
+        res.status(404).json({msg: "Record Not Found"})
+      }
+      else{
+        await User.findByIdAndDelete(find)
+        res.status(200).json({msg: "Record Deleted"})
+      }
+    } catch (error) {
+      res.status(404).json({msg:error.message})
+    }
+  }
 };
 
 
