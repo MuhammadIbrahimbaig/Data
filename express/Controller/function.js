@@ -75,7 +75,31 @@ let data = {
     } catch (error) {
       res.status(404).json({msg:error.message})
     }
-  }
+  },
+  // Edit
+    EditRecord : async  function(req, res){
+      try {
+        let { a } = req.params
+        let {n,e,p,age, c} = req.body
+        let find = await User.findById(a)
+        if (!find) {
+          res.status(404).json({msg: "Record Not Found"})
+        }
+        else{
+          let new_pass = crypt.hashSync(p,15)
+          await User.findByIdAndUpdate(a,{
+            name: n,
+            email : e,
+            password : new_pass,
+            age : age,
+            City : c
+          })
+          res.status(200).json({msg: "Record Updated"})
+        }
+      } catch (error) {
+        res.status(504).json({msg:error.message})
+      }
+    }
 };
 
 
